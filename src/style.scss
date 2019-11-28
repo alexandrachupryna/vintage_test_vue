@@ -1,0 +1,414 @@
+@font-face{
+    font-family: SuisseIntl;
+    src: url(./fonts/SuisseIntl.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: SuisseIntl-Light;
+    src: url(./fonts/SuisseIntl-Light.woff);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: SuisseIntl-SemiBold;
+    src: url(./fonts/SuisseIntl-SemiBold.woff);
+    font-weight: bolder;
+    font-style: normal;
+}
+
+$black: #262626;
+$white: #ffffff;
+$green: #3DB565;
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 0.96em;
+    margin: 0 0 50px;
+}
+
+h2 {
+    font-size: 34px;
+    line-height: 1.41em;
+    margin: 0;
+}
+
+.container {
+    max-width: 1154px;
+    margin: 0 auto;
+}
+
+.contacts {
+    font-family: SuisseIntl-Light;
+    font-weight: 300;
+    padding: 62px 0 100px; 
+    p {
+        font-size: 15px;
+        line-height: 1.87em;
+        margin: 0;
+    }
+    h2 {
+        margin-bottom: 43px;
+    }
+    a {
+        color: $green;
+        text-decoration: none;
+        font-family: SuisseIntl-SemiBold;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .link_tel {
+        font-size: 26px;
+        line-height: 1.38em;
+        font-family: SuisseIntl-Light;
+        letter-spacing: 0;
+    }
+}
+
+.green {
+    color: $green;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts_item {
+    width: 50%;
+}
+
+.contacts_item:first-child {
+    padding-right: 70px;
+}
+
+.contacts_item:last-child {
+    padding-left: 33px;
+    p {
+        margin-bottom: 37px;
+    }
+}
+
+.contacts_headquarters {
+    flex-direction: column;
+}
+
+.contacts_details {
+    line-height: 2.67em;
+}
+
+.address {
+    margin-bottom: 40px;
+}
+
+.offices {
+    background-color: $black;
+    color: $white;
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.offices_address {
+    padding: 90px 0;
+    width: 50%;
+}
+
+.tabs_button {
+    margin-right: 20px;
+    a {
+      font-size: 11px;
+      letter-spacing: 2px;
+      line-height: 6.55em;
+      font-weight: bold;
+    }
+    a.active {
+      color: $green;
+    }
+}
+
+.tabs_button-list {
+    display: flex;
+}
+
+.s_offices_map {
+    height: 100%;
+    width: 50vw;
+    top: 0;
+    left: 50%;
+    position: absolute!important;
+}
+
+.s_offices_adr {
+    h3 {
+      font-size: 26px;
+      letter-spacing: 1px;
+      line-height: 0.77em;
+      font-weight: 300;
+    }
+    p {
+      font-size: 11px;
+      line-height: 1.82em;
+    }
+}
+
+.form {
+    background: url('./assets/pattern.png') no-repeat;
+    background-size: cover; 
+    min-height: 400px;
+    padding: 100px 0;
+    h2 {
+      margin-bottom: 32px;
+    }
+}
+
+.form_wrapper {
+    display: flex;
+    margin: 0 -38px;
+}
+
+.form_item {
+    width: 50%;
+    padding: 0 38px;
+    font-size: 18px;
+}
+
+form {
+    p {
+      margin: 0;
+    }
+
+    p:nth-child(2n) {
+      color: white;
+    }
+
+    .input-text {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid black;
+      input {
+        background-color: transparent;
+        width: 80%;
+        border: none;
+        font-size: 18px;
+      }
+    }
+
+    .input-text:nth-child(2n){
+      border-bottom: 1px solid white;
+      input {
+        color: white;
+      }
+    }
+
+    .input-checkbox {
+      margin-bottom: 36px;
+      input {
+        margin-right: 24px;
+      }
+    }
+
+    .input-submit {
+      font-size: 11px;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 6.577em;
+      background-color: black;
+      border: none;
+      width: 284px;
+    }
+
+    .input-submit:disabled {
+      color: grey;
+    }
+
+    .error {
+      label {
+        color: red;
+      }
+    }
+
+    label {
+      line-height: 3.333; 
+    }
+}
+
+input {
+    outline: none;
+}
+
+@media (max-width: 1199px) {
+    .container {
+        padding: 0 50px;
+    }
+
+    .contacts_details {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 1023px) {
+  
+    .contacts_item:first-child {
+      padding-right: 0;
+    }
+  
+    .contacts_item:last-child {
+      padding-left: 0;
+    }
+
+    .contacts_blocks {
+        flex-direction: column;
+    }
+
+    .contacts_item {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .contacts_blocks {
+        margin: -20px 0;
+    }
+
+    .contacts_block_item {
+        width: 50%;
+        padding: 0 20px;
+    }
+
+    .contacts_block {
+        margin: 0 -20px;
+    }
+
+    .offices {
+        min-height: 900px;
+    }
+
+    .s_offices_map {
+        height: 50%;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        top: 50%;
+    }
+
+    .offices_address {
+        width: 100%;
+    }
+
+    .form_wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .form_item {
+        width: 90%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    h1 {
+        font-size: 38px;
+        margin-bottom: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .container {
+        padding: 0px 20px;
+        max-width: 100%;
+    }
+    
+    .contacts {
+        padding-bottom: 60px;
+        h2 {
+            margin-bottom: 22px;
+        }
+    }
+
+    .contacts_block {
+        flex-direction: column;
+        margin: -20px 0;
+    }
+
+    .contacts_block_item {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .offices_address {
+        padding: 60px 0;
+    }
+
+    .address {
+        margin-bottom: 30px;
+    }
+
+    .contacts_item:last-child p {
+        margin-bottom: 30px;
+    }
+
+    .tabs_button-list {
+        flex-direction: column;
+    }
+
+    .tabs_button a {
+        line-height: 3.27em;
+    }
+
+    .s_offices_adr h3 {
+        line-height: 1.31em;
+    }
+
+    .s_offices_map {
+        height: 45%;
+        top: 55%;
+    }
+
+    .form {
+        padding: 60px 0;
+    }
+
+    .form_wrapper {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .form_item {
+        padding: 0;
+        width: 100%;
+    }
+
+    .input-checkbox label {
+        line-height: 1em;
+    }
+
+    .input-text {
+        margin-bottom: 20px;
+    }
+
+    form .input-submit {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .form h2 {
+        margin-bottom: 16px;
+    }
+}
